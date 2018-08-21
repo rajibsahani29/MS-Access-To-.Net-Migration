@@ -1,0 +1,762 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Mobile.master.vb" Inherits="CRM.Mobile" %>
+
+<!DOCTYPE html">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
+   <title>Fastfixx System developed by Tentacle Solutions</title>
+    <!-- chartist CSS -->
+
+    <link href="../assets/node_modules/chartist-js/dist/chartist.min.css" rel="stylesheet" />
+    <link href="../assets/node_modules/chartist-js/dist/chartist-init.css" rel="stylesheet" />
+    <link href="../assets/node_modules/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet" />
+    <link href="../assets/node_modules/css-chart/css-chart.css" rel="stylesheet" />
+    <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet" />
+    <link href="../assets/node_modules/sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+    <link href="../dist/css/pages/dashboard1.css" rel="stylesheet" />
+    <link href="../dist/css/pages/stylish-tooltip.css" rel="stylesheet" />
+    <link href="../dist/css/pages/other-pages.css" rel="stylesheet" />
+
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet" />
+    <!-- page css -->
+    <link href="../dist/css/pages/widget-page.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    <style>
+        .skin-default-dark .topbar .top-navbar .navbar-header {
+            background-color: #2b2b2b;
+        }
+
+        .image-popup-warp img {
+            height: 30px;
+            width: 30px;
+        }
+
+        .image-popup-warp .card {
+            background-color: transparent;
+            margin-bottom: 0px;
+        }
+
+        .image-popup-warp .card-body {
+            padding: 18px 10px 0 0;
+        }
+
+        .btn-class {
+            padding-left: 0;
+            padding-right: 10px !important;
+        }
+
+        .bg-remove {
+            background-color: transparent;
+            border: 0;
+        }
+
+        .table-main-warp .card {
+            background-color: transparent;
+        }
+      
+       /* .table-main-warp tr {
+            float: left;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        .table-main-warp th, .table-main-warp td {
+            color: #fff;
+        }
+
+        .table-content h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 1.5px;
+        }
+
+        .table-text-content {
+            color: #fff;
+            margin-bottom: 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .table-content ul {
+            margin: 0px;
+            padding: 15px 0;
+            list-style: none;
+        }
+
+            .table-content ul li {
+                display: inline-block;
+            }
+
+                .table-content ul li p {
+                    margin: 0px;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    color: #fff;
+                }
+
+        .table-content h3 {
+            margin: 0;
+            font-weight: 600;
+            color: #fff;
+            padding-bottom: 10px;
+            letter-spacing: 1px;
+            float: left;
+            width: 100%;
+        }
+
+        .table-content .text-right {
+            float: right;
+        }
+
+        .table-content p {
+            margin: 0;
+            color: #fff;
+        }
+
+        ul.btn-section {
+            display: table;
+            margin: 0 auto;
+        }
+
+        .content-show:before {
+            content: none !important;
+        }
+
+        .btn-section li {
+            margin: 0 10px;
+        }
+
+        .table-text-content:before {
+            position: absolute;
+            content: "\f041";
+            color: #fff;
+            left: 0;
+            font-family: FontAwesome;
+        }
+
+        .btn-section button {
+            color: #fff;
+            border-color: #fff;
+        }
+
+            .btn-section button:hover {
+                border-color: #00c292;
+            }
+
+        @media (max-width: 480px) {
+            .btn-section li {
+                margin: 0 4px;
+            }
+
+                .btn-section li .btn-rounded {
+                    padding: 7px 13px !important;
+                }
+
+            .table-content ul {
+                float: left;
+                width: 100%;
+            }
+
+            .table-content .text-left {
+                text-align: left !important;
+            }
+
+            .table-content .text-right {
+                float: none;
+                text-align: left !important;
+            }
+
+            ul.btn-section {
+                float: none !important;
+                width: auto !important;
+            }
+
+            .table-content ul li p {
+                font-size: 12px;
+            }
+
+            .btn-section {
+                padding-top: 40px !important;
+                padding-bottom: 0 !important;
+            }
+        }*/
+    </style>
+
+</head>
+<body class="skin-default-dark fixed-layout">
+    <form id="form1" runat="server">
+        <div>
+            <!-- ============================================================== -->
+            <!-- Preloader - style you can find in spinners.css -->
+            <!-- ============================================================== -->
+            <div class="preloader">
+                <div class="loader">
+                    <div class="loader__figure"></div>
+                    <p class="loader__label">Tentacle Solutions</p>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- Main wrapper - style you can find in pages.scss -->
+            <!-- ============================================================== -->
+            <div id="main-wrapper">
+                <!-- ============================================================== -->
+                <!-- Topbar header - style you can find in pages.scss -->
+                <!-- ============================================================== -->
+                <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index-mobile.aspx">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="../assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+                         <!-- dark Logo text -->
+                         <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
+                         <!-- Light Logo text -->    
+                         <img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-sm-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                           <form class="app-search d-none d-md-block d-lg-block" method="get" action="job_select.aspx">
+                                <input id="txtsearch" type="text" class="form-control" name="Search" placeholder="Search & enter" title="Hit enter to search" >
+                          </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    
+                </div>
+            </nav>
+        </header>
+                <!-- ============================================================== -->
+                <!-- End Topbar header -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Left Sidebar - style you can find in sidebar.scss  -->
+                <!-- ============================================================== -->
+                <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- User Profile-->
+                <div class="user-profile">
+                    <div class="user-pro-body">
+<%--                        <div><img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle"></div>--%>
+                        <div></div>
+
+                        <div class="dropdown">
+                            <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><asp:Label ID="lblname" runat="server"></asp:Label><span class="caret"></span></a>
+                            <div class="dropdown-menu animated flipInY">
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="Change_Settings.aspx" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="logout.aspx" class="dropdown-item"><i class="fa fa-power-off"></i> Logout</a>
+                                <!-- text-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li class="nav-small-cap">--- Engineers</li>
+                         <li> <a class="waves-effect waves-dark" href="Index-mobile.aspx" aria-expanded="false"><i class="fa fa-circle-o text-danger"></i><span class="hide-menu">Home</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="mobile-engineer_select_client.aspx" aria-expanded="false"><i class="fa fa-circle-o text-success"></i><span class="hide-menu">Jobs Search</span></a></li>
+                          <li> <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-circle-o text-danger"></i><span class="hide-menu">Engineers Sheets</span></a>
+                               <ul aria-expanded="false" class="collapse">
+                                <li> <a href="gas-inspection_edit.aspx">Gas Safety</a></li>
+                                 <li> <a href="catering-gas-inspection.aspx">Mobile Catering</a></li>
+                               <li> <a href="gas_jobs_edit.aspx">View Jobs</a></li>
+
+                            </ul>
+
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+                <!-- ============================================================== -->
+                <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Page wrapper  -->
+                <!-- ============================================================== -->
+                <div class="page-wrapper">
+                    <!-- ============================================================== -->
+                    <!-- Container fluid  -->
+                    <!-- ============================================================== -->
+                    <div class="container-fluid">
+                        <!-- ============================================================== -->
+                        <!-- Bread crumb and right sidebar toggle -->
+                        <!-- ============================================================== -->
+                        
+
+                        <!-- Row -->
+                        <div class="table-main-warp">
+                            
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- End PAge Content -->
+                        <!-- ============================================================== -->
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Container fluid  -->
+                    <!-- ============================================================== -->
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Page wrapper  -->
+                <!-- ============================================================== -->
+                <!-- sample modal content -->
+                <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="mySmallModalLabel">Small modal</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            </div>
+                            <div class="modal-body">content will be here </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+                <!-- /.modal -->
+
+                <!-- ============================================================== -->
+                <!-- footer -->
+                <!-- ============================================================== -->
+                <footer class="footer">
+            © Powered by Tentacle Solutions
+        </footer>
+                <!-- ============================================================== -->
+                <!-- End footer -->
+                <!-- ============================================================== -->
+            </div>
+
+
+            <!-- ============================================================== -->
+            <!-- End Wrapper -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- All Jquery -->
+            <!-- ============================================================== -->
+            <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+            <script src="../js/colResizable-1.5.min.js" type="text/javascript"></script>
+
+            <!-- Bootstrap popper Core JavaScript -->
+            <script src="../assets/node_modules/popper/popper.min.js"></script>
+            <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            <!-- slimscrollbar scrollbar JavaScript -->
+            <script src="../dist/js/perfect-scrollbar.jquery.min.js"></script>
+            <!--Wave Effects -->
+            <script src="../dist/js/waves.js"></script>
+            <!--Menu sidebar -->
+            <script src="../dist/js/sidebarmenu.js"></script>
+            <!--Custom JavaScript -->
+            <script src="../assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+            <script src="../assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+            <script src="../assets/node_modules/sweetalert/sweetalert.min.js"></script>
+            <script src="../assets/node_modules/sweetalert/jquery.sweet-alert.custom.js"></script>
+            <script src="../dist/js/custom.min.js"></script>
+            <!-- ============================================================== -->
+            <!-- This page plugins -->
+            <!-- ============================================================== -->
+            <!--morris JavaScript -->
+            <script src="../assets/node_modules/raphael/raphael-min.js"></script>
+            <script src="../assets/node_modules/morrisjs/morris.min.js"></script>
+            <script src="../assets/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+            <!-- Popup message jquery -->
+            <script src="../assets/node_modules/toast-master/js/jquery.toast.js"></script>
+            <!-- Chart JS -->
+            <script src="../dist/js/dashboard1.js"></script>
+            <script src="../assets/node_modules/toast-master/js/jquery.toast.js"></script>
+            <script src="../dist/js/pages/toastr.js"></script>
+
+            <!-- ============================================================== -->
+            <!-- This page plugins -->
+            <!-- ============================================================== -->
+            <script src="../assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+            <script src="../assets/node_modules/gauge/gauge.min.js"></script>
+            <script src="../dist/js/pages/widget-data.js"></script>
+           
+            
+        <!--NEW-->
+<!-- Plugin JavaScript -->
+<script src="../assets/node_modules/moment/moment.js"></script>
+<script src="../assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+<!-- Clock Plugin JavaScript -->
+<script src="../assets/node_modules/clockpicker/dist/jquery-clockpicker.min.js"></script>
+<!-- Color Picker Plugin JavaScript -->
+<script src="../assets/node_modules/jquery-asColorPicker-master/libs/jquery-asColor.js"></script>
+<script src="../assets/node_modules/jquery-asColorPicker-master/libs/jquery-asGradient.js"></script>
+<script src="../assets/node_modules/jquery-asColorPicker-master/dist/jquery-asColorPicker.min.js"></script>
+<!-- Date Picker Plugin JavaScript -->
+<script src="../assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<!-- Date range Plugin JavaScript -->
+<script src="../assets/node_modules/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="../assets/node_modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="dist/js/pages/jasny-bootstrap.js"></script>
+
+
+<script>
+    jQuery(document).ready(function () {
+        // Switchery
+        var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+        $('.js-switch').each(function () {
+            new Switchery($(this)[0], $(this).data());
+        });
+        // For select 2
+        $(".select2").select2();
+        $('.selectpicker').selectpicker();
+        //Bootstrap-TouchSpin
+        $(".vertical-spin").TouchSpin({
+            verticalbuttons: true,
+            verticalupclass: 'ti-plus',
+            verticaldownclass: 'ti-minus'
+        });
+        var vspinTrue = $(".vertical-spin").TouchSpin({
+            verticalbuttons: true
+        });
+        if (vspinTrue) {
+            $('.vertical-spin').prev('.bootstrap-touchspin-prefix').remove();
+        }
+        $("input[name='tch1']").TouchSpin({
+            min: 0,
+            max: 100,
+            step: 0.1,
+            decimals: 2,
+            boostat: 5,
+            maxboostedstep: 10,
+            postfix: '%'
+        });
+        $("input[name='tch2']").TouchSpin({
+            min: -1000000000,
+            max: 1000000000,
+            stepinterval: 50,
+            maxboostedstep: 10000000,
+            prefix: '$'
+        });
+        $("input[name='tch3']").TouchSpin();
+        $("input[name='tch3_22']").TouchSpin({
+            initval: 40
+        });
+        $("input[name='tch5']").TouchSpin({
+            prefix: "pre",
+            postfix: "post"
+        });
+        // For multiselect
+        $('#pre-selected-options').multiSelect();
+        $('#optgroup').multiSelect({
+            selectableOptgroup: true
+        });
+        $('#public-methods').multiSelect();
+        $('#select-all').click(function () {
+            $('#public-methods').multiSelect('select_all');
+            return false;
+        });
+        $('#deselect-all').click(function () {
+            $('#public-methods').multiSelect('deselect_all');
+            return false;
+        });
+        $('#refresh').on('click', function () {
+            $('#public-methods').multiSelect('refresh');
+            return false;
+        });
+        $('#add-option').on('click', function () {
+            $('#public-methods').multiSelect('addOption', {
+                value: 42,
+                text: 'test 42',
+                index: 0
+            });
+            return false;
+        });
+        $(".ajax").select2({
+            ajax: {
+                url: "https://api.github.com/search/repositories",
+                dataType: 'json',
+                delay: 250,
+                data: function (params) {
+                    return {
+                        q: params.term, // search term
+                        page: params.page
+                    };
+                },
+                processResults: function (data, params) {
+                    // parse the results into the format expected by Select2
+                    // since we are using custom formatting functions we do not need to
+                    // alter the remote JSON data, except to indicate that infinite
+                    // scrolling can be used
+                    params.page = params.page || 1;
+                    return {
+                        results: data.items,
+                        pagination: {
+                            more: (params.page * 30) < data.total_count
+                        }
+                    };
+                },
+                cache: true
+            },
+            escapeMarkup: function (markup) {
+                return markup;
+            }, // let our custom formatter work
+            minimumInputLength: 1,
+            templateResult: formatRepo, // omitted for brevity, see the source of this page
+            templateSelection: formatRepoSelection // omitted for brevity, see the source of this page
+        });
+    });
+</script>
+
+
+<script>
+    $(function () {
+        $('#myTable').DataTable();
+
+        var table = $('#example').DataTable({
+            "columnDefs": [{
+                "visible": false,
+                "targets": 2
+            }],
+            "order": [
+               [2, 'asc']
+            ],
+            "displayLength": 25,
+            "drawCallback": function (settings) {
+                var api = this.api();
+                var rows = api.rows({
+                    page: 'current'
+                }).nodes();
+                var last = null;
+
+                api.column(2, {
+                    page: 'current'
+                }).data().each(function (group, i) {
+                    if (last !== group) {
+                        $(rows).eq(i).before(
+                           '<tr class="group"><td colspan="5">' + group + '</td></tr>'
+                       );
+
+                        last = group;
+                    }
+                });
+            }
+        });
+
+        // Order by the grouping
+        $('#example tbody').on('click', 'tr.group', function () {
+            var currentOrder = table.order()[0];
+            if (currentOrder[0] === 2 && currentOrder[1] === 'asc') {
+                table.order([2, 'desc']).draw();
+            } else {
+                table.order([2, 'asc']).draw();
+            }
+        });
+
+    });
+    $('#example23').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+           'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    });
+</script>
+
+<script>
+    // MAterial Date picker    
+    $('#mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+    $('#timepicker').bootstrapMaterialDatePicker({ format: 'HH:mm', time: true, date: false });
+    $('#date-format').bootstrapMaterialDatePicker({ format: 'dddd DD MMMM YYYY - HH:mm' });
+
+    $('#min-date').bootstrapMaterialDatePicker({ format: 'DD/MM/YYYY HH:mm', minDate: new Date() });
+    // Clock pickers
+    $('#single-input').clockpicker({
+        placement: 'bottom',
+        align: 'left',
+        autoclose: true,
+        'default': 'now'
+    });
+    $('.clockpicker').clockpicker({
+        donetext: 'Done',
+    }).find('input').change(function () {
+        console.log(this.value);
+    });
+    $('#check-minutes').click(function (e) {
+        // Have to stop propagation here
+        e.stopPropagation();
+        input.clockpicker('show').clockpicker('toggleView', 'minutes');
+    });
+    if (/mobile/i.test(navigator.userAgent)) {
+        $('input').prop('readOnly', true);
+    }
+    // Colorpicker
+    $(".colorpicker").asColorPicker();
+    $(".complex-colorpicker").asColorPicker({
+        mode: 'complex'
+    });
+    $(".gradient-colorpicker").asColorPicker({
+        mode: 'gradient'
+    });
+    // Date Picker
+    jQuery('.mydatepicker, #datepicker').datepicker({ format: 'dd/mm/yyyy' });
+    jQuery('#datepicker-autoclose').datepicker({
+        autoclose: true,
+        todayHighlight: true
+    });
+    jQuery('#date-range').datepicker({
+        toggleActive: true
+    });
+    jQuery('#datepicker-inline').datepicker({
+        todayHighlight: true
+    });
+    // Daterange picker
+    $('.input-daterange-datepicker').daterangepicker({
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-daterange-timepicker').daterangepicker({
+        timePicker: true,
+        format: 'MM/DD/YYYY h:mm A',
+        timePickerIncrement: 30,
+        timePicker12Hour: true,
+        timePickerSeconds: false,
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse'
+    });
+    $('.input-limit-datepicker').daterangepicker({
+        format: 'MM/DD/YYYY',
+        minDate: '06/01/2015',
+        maxDate: '06/30/2015',
+        buttonClasses: ['btn', 'btn-sm'],
+        applyClass: 'btn-danger',
+        cancelClass: 'btn-inverse',
+        dateLimit: {
+            days: 6
+        }
+    });
+</script>
+                  
+        </div>
+        <script>
+            function ShowPopup(Msg, Status) {
+                if (Status == "success") {
+                    swal(Msg, "", "success")
+                }
+                else if (Status == "error") {
+                    swal({
+                        title: "There was a System Error",
+                        text: Msg,
+                        type: "warning",
+                        showCancelButton: false,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "Ok",
+                        closeOnConfirm: false
+                    });
+                }
+            }
+
+
+            function ShowPopupBlank(Msg) {
+                swal(Msg);
+            }
+
+
+            var isDelete = false;
+
+            function ShowDeletePopup(ele, Msg) {
+
+                if (isDelete == false) {
+                    swal({
+                        title: "Are you sure?",
+                        text: Msg,
+                        type: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#DD6B55",
+                        confirmButtonText: "Yes, delete it!",
+                        cancelButtonText: "cancel",
+                        closeOnConfirm: false,
+                        closeOnCancel: true
+
+                    }, function (isConfirm) {
+                        if (ele, isConfirm) {
+                            isDelete = true;
+                            ele.click();
+                        }
+                        else {
+                            
+                        }
+                        
+                    });
+                }
+
+                return isDelete;
+              
+
+            }
+
+        </script>
+      <script type="text/javascript">
+       $(document).ready(function ()
+       {
+          
+           $(".clsResizeColumn").colResizable({ liveDrag: true });
+           $(".removereadonly").removeAttr("readonly")
+       });
+    </script>
+    </form>
+</body>
+
+        
+</html>
