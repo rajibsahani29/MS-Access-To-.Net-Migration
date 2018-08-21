@@ -52,3 +52,8 @@ This Application has developed using Microsoft Visual Studio 2015 with Microsoft
 <b>NEW JOB FORM</b>
 
 ![NEW JOB FORM](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/5.png?raw=true "NEW JOB FORM")
+
+<b>Report Screen</b>
+
+![Report Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/6.png?raw=true "Report Screen")
+
