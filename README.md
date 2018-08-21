@@ -30,3 +30,12 @@ Also staff can create invoice for a particular job and can send the Invoice in c
 Also staff can download the new customer and jobs added in csv Format.
 
 Engineer can enter the job sheet, Gas safety Inspection, Catering Inspection according to the allocate jobs. If engineer will enter any Jobsheet,it will show a toast message in Dashboard of staff.
+
+<b>About Platform Used</b>
+
+This Application has developed using Microsoft Visual Studio 2015 with Microsoft SQL server 2017. Server-side Technology used is ASP.NET and Language used for developing in VB, along with JQuery, JavaScript, Ajax.
+
+
+<b>Project Structure Screen</b>
+
+![Project Structure Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/2.png?raw=true "Project Structure Screen")
