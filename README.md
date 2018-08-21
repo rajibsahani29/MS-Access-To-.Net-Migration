@@ -42,7 +42,7 @@ This Application has developed using Microsoft Visual Studio 2015 with Microsoft
 
 <b>Login Screen</b>
 
-![Login Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/3.png?raw=true "Login Screen")
+![Login Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/1.png?raw=true "Login Screen")
 
 <b>Dashboad Screen</b>
 
