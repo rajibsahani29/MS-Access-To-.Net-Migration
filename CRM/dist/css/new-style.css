@@ -1,0 +1,248 @@
+.custom-icon .card {
+    margin-bottom: 0;
+}
+.custom-icon ul {
+    margin-bottom: 0 !important;
+}
+.custom-icon ul li{
+    list-style: none;
+    padding:0;
+    display: inline-block; 
+}
+.custom-icon .card-body {
+    padding: 0;
+}
+.btn-class {
+    background-color: #000;
+    color: #ffff;
+    padding: 5px 20px;
+}
+.dt-buttons {
+    display: none !important;
+}
+.custom-icon .card{
+    background-color: transparent;
+}
+.custom-icon {
+    float: right;
+    padding-right: 15px;
+}
+.custom-icon .mytooltip {
+    color: #fff;
+}
+.custom-icon .mytooltip:hover{
+    color: #f95c2e;
+}
+.position-logo {
+    position: relative;
+    left: -14px;
+}
+.form-main-warp {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.form-main-warp .card {
+    margin-bottom: 0;
+}
+.datepicker input {
+    border: 1px solid #f5f5f5 !important;
+}
+.padddng-btn button {
+    padding-right: 25px !important;
+    padding-left: 15px !important;
+}
+.check-main-warp label {
+    position: static;
+    font-size: 12px !important;
+}
+.check-main-warp .icheck-list li {
+    padding-bottom: 5px;
+    display: inline-block;
+    width: 49%;
+}
+.costs-main{
+    width: 100%;
+}
+.costs-file-upload label {
+    position: static;
+}
+.cost-warp {
+    background-color: transparent;
+}
+.radio-table .card-body {
+    padding: 0;
+}
+.note-btn {
+    display: table;
+    margin: 0 auto;
+}
+.first-tab-warp .card-body {
+    padding-bottom: 0;
+}
+.first-tab-warp .card {
+    margin-bottom: 0;
+}
+.tab-btn button {
+    display: table !important;
+    margin: 0 auto !important;
+}
+.search-main-warp {
+    float: left;
+    width: 100%;
+}
+.search-table .col-md-3 {
+    float: left;
+}
+.select-main-table .card {
+    width: 100%;
+}
+.select-warp-section li {
+    width: auto !important;
+    padding-right: 20px;
+}   
+.top-part-warp .col-md-3 {
+    float: left;
+}
+.bottom-form-warp {
+    float: left;
+    width: 100%;
+}
+.bottom-form-warp .col-md-4 {
+    float: left;
+}
+.top-edit .col-md-6, .top-edit .col-md-4, .top-edit .col-md-2 {
+    float: left;
+}
+.top-edit button {
+    margin: 0 !important;
+}
+.van-top-section {
+    float: left;
+    width: 100%;
+}
+.invoice-main-warp {
+    width: 70%;
+    background-color: #fff;
+    display: table;
+    margin: 0 auto 20px;
+    padding: 20px 20px;
+}
+.left-header, .middel-header, .right-header {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding:0 15px;
+}
+.invoice-header {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #000080;
+}
+.right-header {
+    float: right;
+}
+.invoice-page-warp {
+    margin: 0;
+}
+.invoice-page-warp {
+    padding: 0 !important;
+}
+.invoice-content {
+    float: left;
+    width: 100%;
+}
+.faq-invoice {
+    float: left;
+    padding-right: 15px;
+}
+.invoice-content-header span {
+    overflow: hidden;
+    float: left;
+}
+.invoice-form {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+.invoice-table {
+    float: left;
+    width: 100%;
+}
+.invoice-table .table th, .invoice-table .table td{
+    border:0px;
+}
+.invoice-table tbody tr:last-child {
+    border-bottom: 2px solid #000;
+}
+.invoice-table-footer {
+    float: left;
+    width: 100%;
+    position: relative;
+    padding-bottom: 10px;
+}
+.right-footer-invoice .form-group {
+    margin-bottom: 5px;
+}
+.left-footer-invoice p {
+    float: left;
+    color: #1D1D8E;
+    font-weight: 600;
+}
+.left-footer-invoice span {
+    float: right;
+    width: 50%;
+}
+.right-footer-invoice label {
+    text-align: right;
+}
+.invoice-table-footer {
+    float: left;
+    width: 100%;
+    border-bottom: 3px dashed #000080;
+    padding-bottom: 10px;
+}
+.invoice-table-footer:before {
+    position: absolute;
+    content: "";
+    background-image: url(images/scissors.png);
+    height: 29px;
+    width: 37px;
+    background-size: 100% 100%;
+    bottom: -16px;
+    background-color: #fff;
+}
+.invoice-footer{
+    float: left;
+    width: 100%;
+    padding:20px 0;
+}
+.invoice-footer-heading h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #000080;
+}
+.invoice-bottom-left h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.invoice-bottom-right .form-group {
+    margin-bottom: 5px;
+}
+.invoice-bottom-right label {
+    text-align: right;
+}
+.invoice-bottom-left p, .invoice-bottom-right p {
+    margin: 0;
+    padding-top: 30px;
+    color: #000080;
+    font-weight: 600;
+}
+.invoice-bottom-right p{
+    padding-top: 0px;
+}
+.left-header img, .middel-header img {
+    width: 100%;
+    padding: 55px 0;
+}
