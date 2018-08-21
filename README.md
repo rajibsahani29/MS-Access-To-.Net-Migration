@@ -39,3 +39,16 @@ This Application has developed using Microsoft Visual Studio 2015 with Microsoft
 <b>Project Structure Screen</b>
 
 ![Project Structure Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/2.png?raw=true "Project Structure Screen")
+
+<b>Login Screen</b>
+
+![Login Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/3.png?raw=true "Login Screen")
+
+<b>Dashboad Screen</b>
+
+![Dashboad Screen](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/4.png?raw=true "Dashboad Screen")
+
+
+<b>NEW JOB FORM</b>
+
+![NEW JOB FORM](https://github.com/rajibsahani29/MSAccess-.Net-Migration/blob/master/5.png?raw=true "NEW JOB FORM")
